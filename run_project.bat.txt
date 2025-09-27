@@ -1,0 +1,13 @@
+@echo off
+title Run Flutter + Backend
+
+echo Starting backend...
+start cmd /k "cd C:\COLLEGE\notification_app\notification-backend && npm install && node server.js"
+
+timeout /t 5 >nul
+
+echo Starting Flutter app...
+start cmd /k "cd C:\COLLEGE\notification_app\notification_app && flutter pub get && flutter run"
+
+echo All processes started.
+pause
